@@ -2,11 +2,10 @@ import requests
 import json
 import logging
 import os
-import const
 
 sever = "on"
-cookie = const.COOKIE
-sckey = const.SCKEY
+cookie = os.getenv("COOKIE")
+sckey = os.getenv("SCKEY")
 
 logging.basicConfig(
     level=logging.INFO,
