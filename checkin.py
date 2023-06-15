@@ -2,14 +2,15 @@ import requests
 import json
 import logging
 import os
+import const
 
 sever = "on"
-cookie = "koa:sess=eyJ1c2VySWQiOjIwNDczNywiX2V4cGlyZSI6MTcwNDA4NTY2NzQ2MSwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=hTBINafo3XYOBQwp2TNfQ0OPd2A; _gid=GA1.2.169040157.1686730282; _gat_gtag_UA_104464600_2=1; _ga=GA1.1.1206574097.1678165680; _ga_CZFVKMNT9J=GS1.1.1686730281.3.1.1686730497.0.0.0"
-
+cookie = const.COOKIE
+sckey = const.SCKEY
 
 logging.basicConfig(
-    level=logging.INFO, 
-    filename="logging.log", 
+    level=logging.INFO,
+    filename="logging.log",
     filemode="a",
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
@@ -35,10 +36,14 @@ def start():
         time = state.json()['data']['leftDays']
         time = time.split('.')[0]
         if sever == 'on':
-            # print(mess)
+            print(mess)
             logging.info(mess)
+            requests.get('https://sc.ftqq.com/' + sckey +
+                         '.send?text=' + mess + ', you have '+time+' days left')
     else:
-        # 
+        #
+        requests.get('https://sc.ftqq.com/' + sckey +
+                     '.send?text=Cookie Expired')
         logging.error("Cookie Expired")
 
 
