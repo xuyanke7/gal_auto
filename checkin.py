@@ -35,7 +35,7 @@ def start():
         time = state.json()['data']['leftDays']
         time = time.split('.')[0]
         if sever == 'on':
-            # print(mess)
+            print(mess)
             logging.info(mess)
     else:
         # 
