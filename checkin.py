@@ -38,7 +38,7 @@ def start():
             print(mess)
             logging.info(mess)
             requests.get('https://sc.ftqq.com/' + sckey +
-                         '.send?text=' + mess + ', you have '+time+' days left')
+                         '.send?text=' + mess + ‘,’time+'days left')
     else:
         #
         requests.get('https://sc.ftqq.com/' + sckey +
