@@ -39,8 +39,8 @@ def start():
         if sever == 'on':
             print(mess + ', you have '+time+' days left')
             logging.info(mess)
-            requests.post('https://sc.ftqq.com/' + sckey +
-                         '.send?text=' + mess + ', you have '+time+' days left')
+            requests.get('https://sc.ftqq.com/' + sckey +
+                         '.send?text=' + mess + ','+time+'days left')
     else:
         #
         requests.post('https://sc.ftqq.com/' + sckey +
