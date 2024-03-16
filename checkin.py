@@ -7,7 +7,7 @@ sever = "on"
 cookie = os.getenv("COOKIE")
 sckey = os.getenv("SCKEY")
 sckey = "SCT213504TB5Ot5vjoVcHIJEIA5MlZqWwl"
-cookie = "koa:sess=eyJ1c2VySWQiOjIwNDczNywiX2V4cGlyZSI6MTczMTE2MzM2NDc5NSwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=aVwocC76tFq0ooRiYKbUsBkySEc; __stripe_mid=505da4b2-082b-478e-9bb9-98ba19a065a118077d; __stripe_sid=04c07890-446c-4e15-b44a-67bbaca38a80260be8; _gid=GA1.2.700082131.1709102231; _gat_gtag_UA_104464600_2=1; _ga=GA1.1.1009244622.1703344732; _ga_CZFVKMNT9J=GS1.1.1709102231.6.1.1709102267.0.0.0"
+cookie = "_gid=GA1.2.1391917914.1710593251; koa:sess=eyJ1c2VySWQiOjIwNDczNywiX2V4cGlyZSI6MTczNjUxMzI3MDQ3OSwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=vg5xQYTjAKtw9AUCGTGjampNMeg; _gat_gtag_UA_104464600_2=1; _ga_CZFVKMNT9J=GS1.1.1710593250.1.1.1710593317.0.0.0; _ga=GA1.1.1210027151.1710593251"
 
 logging.basicConfig(
     level=logging.INFO,
